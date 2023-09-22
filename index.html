@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<title>Landing page</title>
+	<style type="text/css">
+		body{
+			transition-property: background-color;
+			transition-duration: 0.3s;
+			transition-timing-function: ease;
+		}
+		#background-color{
+			background-color:#25282a;
+			height:40px;
+		}
+		.img{
+		width:86px;
+		height: 25px;
+		margin-top: 1%;
+		float: right;
+		margin-right: 5%;
+		}
+		.margin{
+			margin-left:10%;
+			color: whitesmoke;
+			margin-top: 1%;
+		}
+	
+		.navbar ul{
+			display: flex;
+			margin-top: -27px;
+			border: 2px solid transparent;
+			background-color: rgba(240, 226, 38, 0.948);
+			
+			border-radius: 14px;
+			border-width: none;
+			box-shadow: 0px 0px 30px rgb(0, 0, 0);
+			flex-wrap: wrap;
+		
+			width: 100%;
+			
+		}
+		.navbar ul li{
+			
+			list-style-type: none;
+	
+			
+		}
+		.navbar ul li a{
+			text-decoration: none;
+			color: black;
+			cursor: pointer;
+			
+			
+			
+			
+			
+		}
+		.mar_man{
+			margin-left: 5%;
+		}
+		h6{
+			text-align: justify;
+		}
+		#button{
+			width: 150px;
+			background-color: red;
+			color: aliceblue;
+			border: 1px solid white;
+			padding: 1%;
+			margin-top: 10%;
+		}
+		#button2{
+			width: 150px;
+			background-color: red;
+			color: aliceblue;
+			border:none;
+			border-radius:5px;
+			border-style: none;
+			border-color: transparent;
+			padding: 1%;
+			margin-top: 6%;
+		}
+		#button3{
+			background: none;
+			border: none;
+			margin-top:4%;
+			color: rgba(255, 0, 0, 0.716);
+			padding:0%;
+		}
+		#button4{
+			background:transparent;
+			border: 2px solid black;
+			margin-top:4%;
+			color: rgba(11, 2, 2, 0.716);
+			padding:3%;
+			background-image: url(gallery/phone.png);
+			background-repeat: no-repeat;
+			background-size: 25px;
+			background-position: 20px 24px;
+			padding-right: 10%;
+			margin-left: 15%;
+			font-size: 20px;
+			font-weight: bold;
+			padding-left:10%;
+			text-align: center;
+			cursor: pointer;
+			transition-property: transform;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-in;
+
+		}
+		#background-img{
+			background-image: url(gallery/main3.png);
+			
+		}
+		.content{
+			margin-top:22%;
+			color: aliceblue;
+		}
+		#shadow{
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.188);
+			padding-left: 5%;
+			padding-bottom: 2%;
+		}
+		#bg-color{
+			background-color:red;
+			padding:10%;
+			margin-top: 8%;
+			position: relative;
+			z-index: -1;
+		}
+		#card{
+			transition-property: transform;
+			transition-duration: 0.4s;
+			transition-timing-function: ease-in;
+			cursor: pointer;
+		}
+		#card:hover{
+			transform: scale(1.1);
+		}
+		#btn{
+			border:none;
+			padding:2%;
+			background-image:url(gallery/arrow.jpg);
+			background-size:50px;
+			background-repeat: no-repeat;
+			background-position:13px 17px;
+			transform: rotate(270deg);	
+			background-color: transparent;	
+			float: right;		
+			cursor: pointer;
+			position: sticky;
+			top:20%;
+
+		}
+		#dark{
+        border: 1px solid black;
+    }
+	@media screen and (max-width : 768px){
+		#card{
+		margin-top:3%;
+	}
+		#mar{
+			text-align: center;
+			margin-top: 4%;
+		}
+		#mar1{
+			
+			margin-top: 10%;
+			margin-bottom: 2%;
+
+		}
+		#mar3{
+			width: 80%;
+		}
+		#index{
+			margin-bottom:-2%;
+			
+		}
+		#mar4{
+			margin-left: 0%;
+		}
+		#mar5{
+			margin-top:-5%;
+			margin-left: 0%;	
+		}
+		.img{
+			height: 18px;
+			width: 12%;
+			margin-right: 0%;
+		}
+	}
+
+	@media screen and (max-width : 1160px){
+		#mar5{
+			margin-left:0%;
+
+		}
+		.img{
+			height: 20px;
+			width: 15%;
+			margin-right: 0%;
+	
+		}
+	}
+	 .navbar ul li a:hover
+	{
+		color: red;
+		border-bottom: 1px solid red;
+	}
+	#button4:hover{
+		transform:scale(1.1);
+	}
+
+	@media screen and (max-width : 992px) {
+		#button4{
+			background-size:20px;
+			background-position: 10px 18px;
+			font-size: 16px;
+			margin-bottom: 2%;
+		}
+	}
+	@media screen and (max-width : 768px) {
+		#button4{
+			background-size:20px;
+			background-position: 20px 25px;
+			font-size: 16px;
+			margin-bottom: 2%;
+		}
+	}
+	@media screen and (max-width : 370px) {
+		#button4{
+			background-size:16px;
+			background-position: 10px 15px;
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width : 426px) {
+		#button4{
+			background-size:16px;
+			background-position: 10px 18px;
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width : 324px) {
+		#button4{
+			background-size:16px;
+			background-position: 5px 15px;
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width : 1154px) {
+		#btn{
+			background-size:50px;
+			background-position:0px 0px;
+		}
+		
+	}
+	@media screen and (max-width : 830px) {
+		#btn{
+			background-size:40px;
+			background-position:0px 0px;
+			padding:20px;
+		}
+		
+	}
+	
+.animation{
+	opacity: 0;
+    transform: translateX(-300px);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.2s;
+}
+.display-animation{
+    opacity: 1;
+    transform: translateX(0px);
+}
+	</style>
+</head>
+<body>
+	<div class="container-fluid" id="background-color">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="margin" id="mar4">
+			<h6 style="color: aliceblue;font-size: 12px;">Phone: 1800 0000 1414 | <span><img src="gallery/email.png" alt=""> <span style="font-size: 12px;"> HarjasSingh@gmail.com</span></span></h6>
+			</div>
+		</div>
+		<div class="col-md-6" id="mar5">
+			
+			<input type="submit" value="DARK MODE"  onclick="dark()" style="margin-left: 60%;font-size: 10px;margin-top: 1.5%;color:white;border:none;background-color: rgba(239, 86, 35, 0.799);">
+			<input type="submit" value="LIGHT MODE"  onclick="light()" style="font-size: 10px;margin-top: 1.5%;color:white;border:none;background-color: rgb(220, 117, 88);">
+				
+			<img src="gallery/socialmedia.png" alt="" class="img">
+		</div>
+		</div>
+	</div>
+	</div>
+	
+
+
+	<!-- main section photo -->
+	<div class="container-fluid g-0" style="position: relative; z-index:-1;">
+		<img src="gallery/main.png" alt="" width="100%"  id="img">
+	
+	</div>
+
+	<!-- navbar section -->
+	
+	<div class="container-fluid" >
+		<div class="row" >
+			<div class="col-md-12" >
+				<div class="navbar" >
+					
+				<ul>
+					<li style="padding-left: 10%;"><a href="">Home</a></li>
+					<li style="padding-left: 10%;"><a href="#chance">Academic</a></li>
+					<li style="padding-left: 10%;"><a href="#about">AboutUs</a> </li>
+					<li style="padding-left: 10%;"><a href="#campus">CampusLife</a></li>
+					<li  style="padding-left: 10%;"><a href="#placement">Placement</a></li>
+					<li style="padding-left: 10%;"> <a href="#research">Research</a></li>
+					
+				</ul>
+			
+			</div>
+			</div>
+
+		</div>
+	
+	</div>
+
+<br/>
+<br/>
+<br/>
+	<!-- section after navbar -->
+<div id="about"></div>
+<br/>
+<br/>
+	<div class="container" >
+		
+		<div class="row">
+			<div class="col-md-3">
+			<img src="gallery/img.png" alt=""width="100%"  style="padding-top:10%;">
+			<br>
+			<br>
+			<h4 align="center"style="color: rgb(185, 92, 92);cursor: pointer;">View All Facilities <span><img src="gallery/arrow.png" alt="" width="15px" height="15px" style="padding-bottom: 1%;"></span></h4>
+			</div>
+			<div class="col-md-3">
+			<img src="gallery/video.png"  alt=""width="100%" height="90%" >
+			</div>
+			<div class="col-md-6">
+				<div class="mar_man" >
+				<h3 style="color: red;font-weight: bolder;"class="animation" >MAHARASRISHI <br/> MARKANDESHWAR<br/>UNIVERSITY</h3>
+				<h4 style="font-size:30px;" class="color">Spreading the Education Resolution</h4>
+				<h6  class="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet
+					consectetur adipisicing elit.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit
+					
+					consectetur adipisicing elit.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit
+					
+					consectetur adipisicing elit.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit
+					
+					consectetur adipisicing elit.Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit
+					
+					Tenetur officia libero asperiores assumenda vero numquam doloribus</h6>	
+				
+					<input type="submit" name="Read more" id="button2" value="Read More  ->" >
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="btn" onclick="topFunction()">
+
+	</div>
+<br><br><br><br><br><br>
+		<!-- main image 2 -->
+<div id="chance"></div>
+<br/>
+<br/>
+		<div class="container-fluid">
+			<div class="row" id="background-img" >
+				<div class="col-md-6" id="mar3">
+					<img src="gallery/main2.png" alt=""width="100%">
+				</div>
+				<div class="col-md-6 col-xs-12" >
+					<div class="content" id="mar1">
+						<h3>CHANCELLOR'S MESSAGE</h3>
+						<h5 style="font-weight: lighter;text-align: justify;">Lorem ipsum dolor, sit amet consectetur 
+							harum exercitationem<br/> ullam incidunt , 
+							velit molestias beatae debitis fugit?
+							ullam incidunt<br/> excepturi alias dolores
+							 pariatur nobis vel ad, velit molestias <br/>beatae debitis fugit?</h5>
+							 <input type="submit" name="Read more" id="button2" value="Read More  ->" >
+
+							</div>
+				</div>
+			</div>
+		</div>
+
+<br><br><br><br>
+		<!-- section 4 -->
+		<div id="placement"></div>
+		<br/>
+		<br/>	
+		<div class="container">
+			<h2 align="center" style="color: red;font-weight: bolder;margin-bottom: 3%;">OUR LATEST NEWS</h2>
+			<div class="row" >
+				<div class="col-md-3"  id="card">
+					<img src="gallery/news1.png" class="animation" alt="" width="100%">
+					<div class="bg" id="shadow">
+					<br/><br/>
+					
+					<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+					<br/>
+					<h6 style="font-weight: normal ;"  class="color">Date: 11 September
+						<br/>
+						2021 Location:Arizon
+						<br/>
+						Grand Hall Ticket:<br/>
+						$10.00
+						<br/>
+						<input type="submit" value="Read More ->" id="button3">
+
+					</h6>
+				</div>
+				</div>
+				<div class="col-md-3" id="card">
+					<img src="gallery/news2.png"  class="animation" alt="" width="100%">
+					<div class="bg" id="shadow">
+					<br/><br/>
+					
+					<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+					<br/>
+					<h6 style="font-weight: normal ;"class="color">Date: 11 September
+						<br/>
+						2021 Location:Arizon
+						<br/>
+						Grand Hall Ticket:<br/>
+						$10.00
+						<br/>
+						<input type="submit" value="Read More ->" id="button3">
+
+					</h6>
+				</div>
+				</div>
+				<div class="col-md-3"  id="card">
+					<img src="gallery/news3.png" class="animation" alt="" width="100%">
+					<div class="bg" id="shadow">
+					<br/><br/>
+					
+					<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+					<br/>
+					<h6 style="font-weight: normal ;" class="color">Date: 11 September
+						<br/>
+						2021 Location:Arizon
+						<br/>
+						Grand Hall Ticket:<br/>
+						$10.00
+						<br/>
+						<input type="submit" value="Read More ->" id="button3">
+
+					</h6>
+				</div>
+				</div>
+				<div class="col-md-3" id="card" >
+					<img src="gallery/news4.png"  class="animation" alt="" width="100%">
+					<div class="bg" id="shadow">
+					<br/><br/>
+					
+					<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+					<br/>
+					<h6 style="font-weight: normal ;" class="color">Date: 11 September
+						<br/>
+						2021 Location:Arizon
+						<br/>
+						Grand Hall Ticket:<br/>
+						$10.00
+						<br/>
+						<input type="submit" value="Read More ->" id="button3">
+
+					</h6>
+				</div>
+				</div>
+
+			</div>
+		</div>
+
+<br><br><br><br>
+		<!-- sectiomn 5  -->
+
+		<div id="research"></div>
+	<br/>
+	<br/>	
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+				<h2 style="color: red;font-weight: bolder;">PREPARING YOU FOR THE REAL <br/>WORLD</h2>
+				<br/>
+				<h5 style="font-weight: normal;" class="color">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat iusto quaerat tempore
+					 nesciunt error a illo repellendus blanditiis magnam voluptate debitis, suscipit deleniti cum veritatis</h5>
+				<br/>
+				<input type="submit" name="Read more" id="button2" value="Read More  ->" >
+			</div>
+				<div class="col-md-6" id="mar">
+				<img src="gallery/map.png" alt="" width="100%">
+				</div>
+			</div>
+		
+
+		<!-- section5+1 -->
+
+	
+	<div class="row" id="mar">
+				<div class="col-md-2" >
+					<h3 style="color: red;" >50+<span style="color: black;font-size: 18px;font-weight: normal;" class="color">HITACHI LAB IN DIFFERENT DEPARMENTS</span></h3>
+				</div>
+
+				<div class="col-md-2" style="padding-left: 5%;">
+					<h3 style="color: red;">12+<span style="color: black;font-size: 16px;font-weight: normal;" class="color">LIBRARY IN DIFFERENT DEPARMENTS</span></h3>
+
+				</div>
+
+				<div class="col-md-2" style="padding-left: 5%;">
+					<h3 style="color: red;">50+<span style="color: black;font-size: 16px;font-weight: normal;" class="color">FULLY CONTAINS <span style="color: red; font-size: 20px;">WIFI</span> IN DIFFERENT DEPARMENTS</span></h3>
+
+				</div>
+
+				<div class="col-md-2" style="padding-left: 5%;">
+					<h3 style="color: red;">5000+<span style="color: black;font-size: 16px;font-weight: normal;" class="color">HITACHI LAB IN DIFFERENT DEPARMENTS</span></h3>
+
+				</div>
+
+				<div class="col-md-2" style="padding-left: 5%;">
+					<h3 style="color: red;">50000+<span style="color: black;font-size: 16px;font-weight: normal;" class="color">SUCCESS STORIES OF DEPARMENTS</span></h3>
+
+				</div>
+			</div>
+		</div>
+
+
+<br><br><br><br>
+
+
+		<!-- section 7 -->
+		<div id="campus"></div>
+		<br/>
+
+		<br/>
+		<div class="container">
+			<div class="row" >
+				<div class="col-md-8">
+					<h2 style="color:red;font-weight: bolder;" >UNIVERSITY EVENTS <br/><span style="font-size: 22px;color: black;font-weight: normal;">Bring The Best Speaker At Every Events</span></h2>
+				</div>
+				<div class="col-md-4 ">
+					<input type="submit" name="Read more" id="button2" value="All Events"style="float:right;">
+
+				</div>
+			</div>
+
+			<div class="row">
+			<div class="col-md-6"  id="card">
+				<img src="gallery/img2.png" class="animation" alt=""width="100%">
+			</div>
+
+			<div class="col-md-3"  id="card">
+				<img src="gallery/img3.png"class="animation" alt=""width="100%">
+				<div class="bg" id="shadow">
+					<br/><br/>
+					
+					<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+					<br/>
+					<h6 style="font-weight: normal ;" class="color">Date: 11 September
+						<br/>
+						2021 Location:Arizon
+						
+						Grand Hall Ticket:<br/>
+						$10.00
+						
+						<input type="submit" value="Read More ->" id="button3">
+
+					</h6>
+				</div>
+			</div>
+
+			<div class="col-md-3"  id="card">
+			<img src="gallery/img4.png" class="animation" alt=""width="100%">
+			<div class="bg" id="shadow">
+				<br/><br/>
+				
+				<h5 style="color: red;">Wellbeing Self-Isolation Daily Drop In</h5>
+				<br/>
+				<h6 style="font-weight: normal ;" class="color">Date: 11 September
+					<br/>
+					2021 Location:Arizon
+					
+					Grand Hall Ticket:<br/>
+					$10.00
+					
+					<input type="submit" value="Read More ->" id="button3">
+
+				</h6>
+			</div>
+		</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- section 8 -->
+		
+		<div class="container-fluid"id="bg-color">
+
+		</div>
+
+		<!-- section 9 -->
+
+		
+		<div class="container" style="margin-top: -10%;">
+			<h2 align="center"style="color:white;" id="index">Testonomials</h2>
+			<div class="row" >
+				<div class="col-md-4"  id="card" >
+				<img src="gallery/card.png" class="animation" alt=""width="100%">
+				</div>
+
+				<div class="col-md-4"  id="card" >
+					<img src="gallery/card2.png" class="animation" alt=""width="100%">
+				</div>
+
+				<div class="col-md-4"  id="card">
+					<img src="gallery/card3.png"   class="animation" alt=""width="100%">
+				</div>
+			</div>
+		</div>
+
+<br><br><br><br>
+		<!-- last section -->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<h1 style="color: red;font-weight: bolder; margin-left: 15%;">Rolling Admissions <br/> Now Open</h1><br/>
+				<h3 style="text-transform: capitalize;margin-left: 15%;font-weight: lighter;" class="color">get in touch with us:</h3>
+			<br/>
+			<input type="submit" value="1800 2742 250" id="button4" >	
+			
+			</div>
+				<div class="col-md-6" style="position: relative;z-index: -1;">
+				<img src="gallery/main4.png" alt=""width="100%">
+				</div>
+			</div>
+		</div>
+
+		
+
+
+<script>
+	var btn = document.getElementById("mybtn")
+
+
+function topFunction() {
+
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+function dark(){
+     document.body.style.background = "black";
+	 let color = document.querySelectorAll(".color");
+	 for (let index = 0; index <= color.length; index++) {
+		color[index].style.color = "white";
+	document.getElementById("button4").style.cssText = 
+	`border: 1px solid white;
+	 color: white;
+	 background-image:url(gallery/phonewhite.jpg);
+	 background-position:20px 26px;
+	 `;
+		
+	 }
+	
+    }
+	function light(){
+     document.body.style.background = "white";
+	 let color = document.querySelectorAll(".color");
+	 for (let index = 0; index <= color.length; index++) {
+		color[index].style.color = "black";
+		document.getElementById("button4").style.cssText = 
+	`border: 1px solid black;
+	 color: black;
+	 background-image:url(gallery/phone.png);
+	 
+	 `;
+		
+	 }
+	}
+
+	const animation = document.querySelectorAll('.animation');
+
+	const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('display-animation')
+        }
+            else {
+                entry.target.classList.remove('display-animation')
+            }
+        
+    })
+},
+   { threshold: 0.3
+   });
+//
+  for (let i = 0; i < animation.length; i++) {
+   const elements = animation[i];
+
+    observer.observe(elements);
+  } 
+
+  
+
+
+
+
+
+</script>
+
+		<!-- footer -->
+
+<div class="container-fluid g-0">
+	<footer style="background-color: red;color: white;font-size: 14px;padding:2%;"align="center">
+		Copyright 	&#169 2023 HSB SOLUTIONS. All rights reserved.
+	</footer>
+</div>
+	</body>
+</html>
